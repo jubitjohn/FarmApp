@@ -9,19 +9,17 @@ import 'soil.dart';
 import 'tips.dart';
 import 'weather.dart';
 
-class KisanRakshak extends StatefulWidget
-{
+class KisanRakshak extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
     return KisanRakshakState();
   }
-
 }
 
 class KisanRakshakState extends State<KisanRakshak> {
   int currentIndex = 0;
-  final List<Widget> _pages=[
+  final List<Widget> _pages = [
     Weather(),
     SoilList(),
     Helper(),
@@ -61,10 +59,24 @@ class KisanRakshakState extends State<KisanRakshak> {
                     children: [
                       Center(
                         heightFactor: 0.6,
-                        child: FloatingActionButton(backgroundColor: Colors.green, child: Icon(FontAwesomeIcons.gitlab), elevation: 0.1, onPressed: () {setBottomBarIndex(2);}),
+                        child: FloatingActionButton(
+                            backgroundColor: Colors.green,
+                            child: Icon(FontAwesomeIcons.gitlab),
+                            elevation: 0.1,
+                            onPressed: () {
+                              setBottomBarIndex(2);
+                            }),
                       ),
-                      SizedBox(height: 26,),
-                      Text('Sahayak ',style: GoogleFonts.getFont('Didact Gothic',color:Colors.white,fontWeight: FontWeight.bold,fontSize: 14),)
+                      SizedBox(
+                        height: 26,
+                      ),
+                      Text(
+                        'Sahayak ',
+                        style: GoogleFonts.getFont('Didact Gothic',
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14),
+                      )
                     ],
                   ),
                   Container(
@@ -74,64 +86,100 @@ class KisanRakshakState extends State<KisanRakshak> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Column(
-                          mainAxisAlignment:MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             IconButton(
                               icon: Icon(
                                 FontAwesomeIcons.cloudSunRain,
-                                color: currentIndex == 0 ? Colors.white : Colors.black,
+                                color: currentIndex == 0
+                                    ? Colors.white
+                                    : Colors.black,
                               ),
                               onPressed: () {
                                 setBottomBarIndex(0);
                               },
                               splashColor: Colors.white,
                             ),
-                            Text('Weather',style: GoogleFonts.didactGothic(fontSize: 14,color: currentIndex == 0 ?Colors.white:Colors.black),)
+                            Text(
+                              'Weather',
+                              style: GoogleFonts.didactGothic(
+                                  fontSize: 14,
+                                  color: currentIndex == 0
+                                      ? Colors.white
+                                      : Colors.black),
+                            )
                           ],
                         ),
                         Column(
-                          mainAxisAlignment:MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             IconButton(
                                 icon: Icon(
                                   FontAwesomeIcons.seedling,
-                                  color: currentIndex == 1 ? Colors.white : Colors.black,
+                                  color: currentIndex == 1
+                                      ? Colors.white
+                                      : Colors.black,
                                 ),
                                 onPressed: () {
                                   setBottomBarIndex(1);
                                 }),
-                            Text('Soilpedia',style: GoogleFonts.didactGothic(fontSize: 14,color: currentIndex == 1 ?Colors.white:Colors.black),)
+                            Text(
+                              'Soilpedia',
+                              style: GoogleFonts.didactGothic(
+                                  fontSize: 14,
+                                  color: currentIndex == 1
+                                      ? Colors.white
+                                      : Colors.black),
+                            )
                           ],
                         ),
                         Container(
                           width: size.width * 0.20,
                         ),
                         Column(
-                          mainAxisAlignment:MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             IconButton(
                                 icon: Icon(
-                                    FontAwesomeIcons.list,
-                                  color: currentIndex == 3 ? Colors.white : Colors.black,
+                                  FontAwesomeIcons.list,
+                                  color: currentIndex == 3
+                                      ? Colors.white
+                                      : Colors.black,
                                 ),
                                 onPressed: () {
                                   setBottomBarIndex(3);
                                 }),
-                            Text('Tips',style: GoogleFonts.didactGothic(fontSize: 14,color: currentIndex == 3 ?Colors.white:Colors.black),)
+                            Text(
+                              'Tips',
+                              style: GoogleFonts.didactGothic(
+                                  fontSize: 14,
+                                  color: currentIndex == 3
+                                      ? Colors.white
+                                      : Colors.black),
+                            )
                           ],
                         ),
                         Column(
-                          mainAxisAlignment:MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             IconButton(
                                 icon: Icon(
                                   FontAwesomeIcons.mobile,
-                                  color: currentIndex == 4 ? Colors.white : Colors.black,
+                                  color: currentIndex == 4
+                                      ? Colors.white
+                                      : Colors.black,
                                 ),
                                 onPressed: () {
                                   setBottomBarIndex(4);
                                 }),
-                            Text('Contact Us',style: GoogleFonts.didactGothic(fontSize: 14,color:currentIndex == 4 ?Colors.white:Colors.black),),
+                            Text(
+                              'Chat with us',
+                              style: GoogleFonts.didactGothic(
+                                  fontSize: 14,
+                                  color: currentIndex == 4
+                                      ? Colors.white
+                                      : Colors.black),
+                            ),
                           ],
                         ),
                       ],
@@ -158,7 +206,8 @@ class BNBCustomPainter extends CustomPainter {
     path.moveTo(0, 20); // Start
     path.quadraticBezierTo(size.width * 0.20, 0, size.width * 0.35, 0);
     path.quadraticBezierTo(size.width * 0.40, 0, size.width * 0.40, 20);
-    path.arcToPoint(Offset(size.width * 0.60, 20), radius: Radius.circular(20.0), clockwise: false);
+    path.arcToPoint(Offset(size.width * 0.60, 20),
+        radius: Radius.circular(20.0), clockwise: false);
     path.quadraticBezierTo(size.width * 0.60, 0, size.width * 0.65, 0);
     path.quadraticBezierTo(size.width * 0.80, 0, size.width, 20);
     path.lineTo(size.width, size.height);
