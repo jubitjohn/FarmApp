@@ -165,18 +165,18 @@ class KisanRakshakState extends State<KisanRakshak> {
                             IconButton(
                                 icon: Icon(
                                   FontAwesomeIcons.mobile,
-                                  color: currentIndex == 4
+                                  color: currentIndex == 2
                                       ? Colors.white
                                       : Colors.black,
                                 ),
                                 onPressed: () {
-                                  setBottomBarIndex(4);
+                                  setBottomBarIndex(2);
                                 }),
                             Text(
                               'Chat with us',
                               style: GoogleFonts.didactGothic(
                                   fontSize: 14,
-                                  color: currentIndex == 4
+                                  color: currentIndex == 2
                                       ? Colors.white
                                       : Colors.black),
                             ),
