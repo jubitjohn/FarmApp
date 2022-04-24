@@ -20,7 +20,7 @@ class Imagedisplay extends StatelessWidget {
                 height: 20,
               ),
               //  image != null ? Image.file(image!): Text("No image selected")
-              Text("No image selected"),
+              Text("No image is selected"),
             ],
           ),
         ),
