@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tflite/tflite.dart';
 import 'dart:io';
 import 'about_us.dart';
 import 'helper.dart';
@@ -34,6 +35,37 @@ class KisanRakshakState extends State<KisanRakshak> {
     } on PlatformException catch (e) {
       print('Failed to pick image: $e');
     }
+  }
+
+  List _result;
+
+  String _confidence = "";
+  String _name = "";
+  String numbers = '';
+
+  loadMyModal() async {
+    var resultant = await Tflite.loadModel(model: "assets/output.tflite");
+    print("Result After loading model : $resultant");
+  }
+
+  applyModelOnImage(File file) async {
+    var res = await Tflite.runModelOnImage(
+      path: file.path,
+      numResults: 2,
+      threshold: .5,
+      imageMean: 127.5,
+      imageStd: 127.5,
+    );
+    setState(() {
+      _result = res;
+      String str = _result[0];
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    loadMyModal();
   }
 
   int currentIndex = 0;
