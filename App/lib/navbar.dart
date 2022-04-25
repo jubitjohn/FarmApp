@@ -37,36 +37,36 @@ class KisanRakshakState extends State<KisanRakshak> {
     }
   }
 
-  List _result;
+  // List _result;
 
-  String _confidence = "";
-  String _name = "";
-  String numbers = '';
+  // String _confidence = "";
+  // String _name = "";
+  // String numbers = '';
 
-  loadMyModal() async {
-    var resultant = await Tflite.loadModel(model: "assets/output.tflite");
-    print("Result After loading model : $resultant");
-  }
+  // loadMyModal() async {
+  //   var resultant = await Tflite.loadModel(model: "assets/output.tflite");
+  //   print("Result After loading model : $resultant");
+  // }
 
-  applyModelOnImage(File file) async {
-    var res = await Tflite.runModelOnImage(
-      path: file.path,
-      numResults: 2,
-      threshold: .5,
-      imageMean: 127.5,
-      imageStd: 127.5,
-    );
-    setState(() {
-      _result = res;
-      String str = _result[0];
-    });
-  }
+  // applyModelOnImage(File file) async {
+  //   var res = await Tflite.runModelOnImage(
+  //     path: file.path,
+  //     numResults: 2,
+  //     threshold: .5,
+  //     imageMean: 127.5,
+  //     imageStd: 127.5,
+  //   );
+  //   setState(() {
+  //     _result = res;
+  //     String str = _result[0];
+  //   });
+  // }
 
-  @override
-  void initState() {
-    super.initState();
-    loadMyModal();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   loadMyModal();
+  // }
 
   int currentIndex = 0;
   final List<Widget> _pages = [
@@ -119,7 +119,7 @@ class KisanRakshakState extends State<KisanRakshak> {
                               setBottomBarIndex(5);
                             }),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 26,
                       ),
                       Text(
