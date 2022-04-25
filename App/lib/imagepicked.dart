@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'navbar.dart';
 
-class Imagedisplay extends StatelessWidget {
+class Imagedisplay extends StatefulWidget {
   const Imagedisplay({Key? key}) : super(key: key);
 
+  @override
+  State<Imagedisplay> createState() => _ImagedisplayState();
+}
+
+class _ImagedisplayState extends State<Imagedisplay> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
