@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -23,18 +25,17 @@ class KisanRakshak extends StatefulWidget {
 
 class KisanRakshakState extends State<KisanRakshak> {
   File? image;
+  bool? isImageLoaded = false;
+
   Future pickImage() async {
-    try {
-      final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    var image = await ImagePicker().pickImage(source: ImageSource.gallery);
 
-      if (image == null) return;
-
-      final imageTemp = File(image.path);
-
-      setState(() => this.image = imageTemp);
-    } on PlatformException catch (e) {
-      print('Failed to pick image: $e');
-    }
+    if (image == null) return;
+    final imageTemp = File(image.path);
+    setState(() {
+      this.image = imageTemp;
+      isImageLoaded = true;
+    });
   }
 
   // List _result;
@@ -75,7 +76,7 @@ class KisanRakshakState extends State<KisanRakshak> {
     Helper(),
     Tips(),
     AboutUs(),
-    Imagedisplay(),
+    Imagedisplay(pickedImage: image),
   ];
   setBottomBarIndex(index) {
     setState(() {

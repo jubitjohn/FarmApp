@@ -1,14 +1,19 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'navbar.dart';
 
 class Imagedisplay extends StatefulWidget {
-  const Imagedisplay({Key? key}) : super(key: key);
+  final File pickedImage;
+  const Imagedisplay({Key? key, required this.pickedImage}) : super(key: key);
 
   @override
   State<Imagedisplay> createState() => _ImagedisplayState();
 }
 
 class _ImagedisplayState extends State<Imagedisplay> {
+  File? get pickedImage => null;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,10 +27,16 @@ class _ImagedisplayState extends State<Imagedisplay> {
           child: Column(
             children: [
               SizedBox(
-                height: 20,
+                height: 50,
               ),
-              //  image != null ? Image.file(image!): Text("No image selected")
-              Text("No image is selected"),
+              Center(
+                  child: Container(
+                height: 400,
+                width: 400,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: FileImage(pickedImage!), fit: BoxFit.contain)),
+              ))
             ],
           ),
         ),
