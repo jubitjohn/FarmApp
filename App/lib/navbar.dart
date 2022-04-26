@@ -124,7 +124,7 @@ class KisanRakshakState extends State<KisanRakshak> {
                                   setBottomBarIndex(1);
                                 }),
                             Text(
-                              'Soilpedia',
+                              'Diseasepedia',
                               style: GoogleFonts.didactGothic(
                                   fontSize: 14,
                                   color: currentIndex == 1
