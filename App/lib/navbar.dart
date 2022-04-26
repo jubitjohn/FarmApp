@@ -22,51 +22,36 @@ class KisanRakshak extends StatefulWidget {
 }
 
 class KisanRakshakState extends State<KisanRakshak> {
-  File? image;
-  Future pickImage() async {
-    try {
-      final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+  // List _result;
 
-      if (image == null) return;
+  // String _confidence = "";
+  // String _name = "";
+  // String numbers = '';
 
-      final imageTemp = File(image.path);
+  // loadMyModal() async {
+  //   var resultant = await Tflite.loadModel(model: "assets/output.tflite");
+  //   print("Result After loading model : $resultant");
+  // }
 
-      setState(() => this.image = imageTemp);
-    } on PlatformException catch (e) {
-      print('Failed to pick image: $e');
-    }
-  }
+  // applyModelOnImage(File file) async {
+  //   var res = await Tflite.runModelOnImage(
+  //     path: file.path,
+  //     numResults: 2,
+  //     threshold: .5,
+  //     imageMean: 127.5,
+  //     imageStd: 127.5,
+  //   );
+  //   setState(() {
+  //     _result = res;
+  //     String str = _result[0];
+  //   });
+  // }
 
-  List _result;
-
-  String _confidence = "";
-  String _name = "";
-  String numbers = '';
-
-  loadMyModal() async {
-    var resultant = await Tflite.loadModel(model: "assets/output.tflite");
-    print("Result After loading model : $resultant");
-  }
-
-  applyModelOnImage(File file) async {
-    var res = await Tflite.runModelOnImage(
-      path: file.path,
-      numResults: 2,
-      threshold: .5,
-      imageMean: 127.5,
-      imageStd: 127.5,
-    );
-    setState(() {
-      _result = res;
-      String str = _result[0];
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    loadMyModal();
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   loadMyModal();
+  // }
 
   int currentIndex = 0;
   final List<Widget> _pages = [
@@ -75,7 +60,7 @@ class KisanRakshakState extends State<KisanRakshak> {
     Helper(),
     Tips(),
     AboutUs(),
-    Imagedisplay(),
+    const DisplayImage(),
   ];
   setBottomBarIndex(index) {
     setState(() {
@@ -115,11 +100,10 @@ class KisanRakshakState extends State<KisanRakshak> {
                             child: Icon(FontAwesomeIcons.camera),
                             elevation: 0.1,
                             onPressed: () {
-                              pickImage();
                               setBottomBarIndex(5);
                             }),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 26,
                       ),
                       Text(
