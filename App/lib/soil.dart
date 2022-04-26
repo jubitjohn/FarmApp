@@ -15,7 +15,7 @@ class _SoilListState extends State<SoilList> {
     Soil(
         title: 'Early Blight',
         image: Image.asset(
-          'assets/soil/black.jpeg',
+          'assets/soil/alluvial.jpeg',
           fit: BoxFit.fill,
         ),
         index: 0),
