@@ -97,6 +97,7 @@ class KisanRakshakState extends State<KisanRakshak> {
                         heightFactor: 0.6,
                         child: FloatingActionButton(
                             backgroundColor: Colors.green,
+
                             child: Icon(FontAwesomeIcons.camera),
                             elevation: 0.1,
                             onPressed: () {
@@ -108,6 +109,7 @@ class KisanRakshakState extends State<KisanRakshak> {
                       ),
                       Text(
                         'Scan ',
+
                         style: GoogleFonts.getFont('Didact Gothic',
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -160,7 +162,10 @@ class KisanRakshakState extends State<KisanRakshak> {
                                   setBottomBarIndex(1);
                                 }),
                             Text(
-                              'Soilpedia',
+
+
+                              'Diseasepedia',
+
                               style: GoogleFonts.didactGothic(
                                   fontSize: 14,
                                   color: currentIndex == 1
@@ -201,18 +206,24 @@ class KisanRakshakState extends State<KisanRakshak> {
                             IconButton(
                                 icon: Icon(
                                   FontAwesomeIcons.mobile,
-                                  color: currentIndex == 4
+
+
+                                  color: currentIndex == 2
+
                                       ? Colors.white
                                       : Colors.black,
                                 ),
                                 onPressed: () {
-                                  setBottomBarIndex(4);
+                                  setBottomBarIndex(2);
                                 }),
                             Text(
-                              'Contact Us',
+
+
+                              'Chat with us',
                               style: GoogleFonts.didactGothic(
                                   fontSize: 14,
-                                  color: currentIndex == 4
+                                  color: currentIndex == 2
+
                                       ? Colors.white
                                       : Colors.black),
                             ),
