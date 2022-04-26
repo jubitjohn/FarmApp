@@ -15,49 +15,49 @@ class _SoilListState extends State<SoilList> {
     Soil(
         title: 'Early Blight',
         image: Image.asset(
-          'assets/soil/alluvial.jpeg',
+          'assets/soil/early-blight.jpg',
           fit: BoxFit.fill,
         ),
         index: 0),
     Soil(
-        title: 'Black Soil',
+        title: 'Late Blight',
         image: Image.asset(
-          'assets/soil/black.jpg',
+          'assets/soil/late-blight.jpg',
           fit: BoxFit.fill,
         ),
         index: 1),
     Soil(
-        title: 'Red and Yellow Soil',
+        title: 'T - bacterial spot',
         image: Image.asset(
-          'assets/soil/red-yellow.jpg',
+          'assets/soil/t-bacterial.jpg',
           fit: BoxFit.fill,
         ),
         index: 2),
     Soil(
-        title: 'Laterite Soil',
+        title: 'T - early blind',
         image: Image.asset(
-          'assets/soil/laterite.jpg',
+          'assets/soil/t-early-blind.jpg',
           fit: BoxFit.fill,
         ),
         index: 3),
     Soil(
-        title: 'Arid Soil',
+        title: 'Leaf mold',
         image: Image.asset(
-          'assets/soil/arid.jpg',
+          'assets/soil/leaf.jpg',
           fit: BoxFit.fill,
         ),
         index: 4),
     Soil(
-        title: 'Mountain and Forest Soil',
+        title: 'septori a leaf spot',
         image: Image.asset(
-          'assets/soil/mountain.jpg',
+          'assets/soil/septori.jpg',
           fit: BoxFit.fill,
         ),
         index: 5),
     Soil(
-        title: 'Desert Soil',
+        title: 'Canker',
         image: Image.asset(
-          'assets/soil/desert.jpg',
+          'assets/soil/canker.jpg',
           fit: BoxFit.fill,
         ),
         index: 6)
@@ -73,7 +73,7 @@ class _SoilListState extends State<SoilList> {
         child: Scaffold(
           backgroundColor: Colors.green[200],
           appBar: AppBar(
-            title: Text('Soilpedia',
+            title: Text('Diseasepedia',
                 style: GoogleFonts.poppins(
                   color: Colors.black,
                   fontSize: 25.0,

@@ -21,89 +21,82 @@ class SoilCard extends StatelessWidget {
         crop:
             'Cotton, wheat, sorghum, bajra, maize, barley, jute, tobacco, green and black gram, chickpea, pigeon pea, soybean, sesame, groundnut, linseed + any type of oilseed, fruit, and vegetable.',
         photo: Image.asset(
-          'assets/detail/alluvial1.jpg',
+          'assets/detail/early-blight.jpg',
           fit: BoxFit.fill,
         )),
     Detail(
-        name: 'Black Soil',
+        name: 'Late Blight',
         about:
-            'The black soils are also called regur (from the Telugu word Reguda) and black cotton soils because cotton is the most important crop grown on these soils.The black soil is very retentive of moisture. It swells greatly and becomes sticky when wet in rainy season. Under such conditions, it is almost impossible to work on such soil because the plough gets stuck in the mud.',
+            'Late blight is a potentially devastating disease of tomato and potato, infecting leaves, stems, tomato fruit, and potato tubers. The disease spreads quickly in fields and can result in total crop failure if untreated. Late blight does not occur every year in Minnesota.',
         found:
-            'Deccan lava tract. This includes states of Gujarat, Madhya Pradesh, Maharashtra, Andhra Pradesh, Tamil Nadu, and Telangana. This soil type is prominent in river valley of rivers Narmada, Godavari, Tapi, and Krishna.',
+            'Late Blight in the beginning affects the leaves and slowly it starts affecting the fruits too',
         character:
-            'These soils are formed when lava rocks weather away. Rich in magnesium, iron, aluminum, and lime. Poor in nitrogen, phosphorus, and organic matter. Black soils get sticky when fully wet. They develop cracks when fully dry. The soils attain black color due to deposits of humus and salts during their formation. They moisture excellently.',
-        crop:
-            'Cotton is the major crop. So, black soil is also called black cotton soil. Other crops include wheat, cereals, rice, jowar, sugarcane, linseed, sunflower, groundnut, tobacco, millets, citrus fruits, oilseed crops of all kinds, and vegetables.',
+            'Similar to early blight they occur as round patches at the edges of leaves',
+        crop: 'Major crops affected are tomato and potato',
         photo: Image.asset(
-          'assets/detail/black1.jpg',
+          'assets/detail/late-blight.jpg',
           fit: BoxFit.fill,
         )),
     Detail(
-        name: 'Red and Yellow Soil',
+        name: 'T-bacterial spot',
         about:
-            'Red and Yellow soil are encountered over extensive nonalluvial tracts of peninsular India and are made up of such acidic rocks as granite, gneiss, and schist. They develop in areas in which rainfall leaches soluble minerals out of the ground and results in a loss of chemically basic constituents; a corresponding proportional increase in oxidized iron imparts a reddish hue to many such soils. Hence, they are commonly described as ferralitic soils.',
-        found: 'Deccan plateau, Western Ghat, Orissa, and Chhattisgarh.',
-        character:
-            'The soils are red due to iron oxide in them. The soils form when metamorphic rocks weather away. Rich in potash. Somewhat acidic. Poor in nitrogen, magnesium, lime, phosphorus, and organic matter. Soils are sandy.',
-        crop:
-            'Groundnut, potato, maize/corn, rice, ragi, wheat, millets, pulses, sugarcane, oilseeds, and fruits like citrus, orange, mango, and vegetables.',
-        photo: Image.asset(
-          'assets/detail/red-yellow1.jpg',
-          fit: BoxFit.fill,
-        )),
-    Detail(
-        name: 'Laterite Soil',
-        about:
-            'Laterite is both a soil and a rock type rich in iron and aluminium and is commonly considered to have formed in hot and wet tropical areas. Nearly all laterites are of rusty-red coloration, because of high iron oxide content. They develop by intensive and prolonged weathering of the underlying parent rock, usually when there are conditions of high temperatures and heavy rainfall with alternate wet and dry periods.',
+            'Bacterial spot is one of the most detrimental diseases of tomato and is present worldwide wherever tomatoes are grown. Bacterial spot of tomato is especially severe in the southeast United States when weather conditions (high temperature, high humidity, and rain) become conducive for disease development.',
         found:
-            'Madhya Pradesh, Kerala, Karnataka, Tamil Nadu, Assam, and Orissa.',
+            'Found on leaves with black patches and a light coloured border.',
         character:
-            'Acidic soils, rich in iron. They are used in the making of bricks due to high iron content. Poor in organic matter, calcium, nitrogen, and phosphate. Not very fertile.',
-        crop:
-            'Cotton, wheat, rice, pulses, rubber, tea, coffee, coconut, and cashews.',
+            'They show rapid increase in spreading all over the leaves and slowly affecting the fruits',
+        crop: ' Tomatoes and potatoes',
         photo: Image.asset(
-          'assets/detail/laterite1.jpg',
+          'assets/detail/t-bacterial.jpg',
           fit: BoxFit.fill,
         )),
     Detail(
-        name: 'Arid Soil',
+        name: 'T- Early blind',
         about:
-            'Arid soils are a soil order in USDA soil taxonomy. Arid soils form in an arid or semi-arid climate. Arid soils dominate the deserts and xeric shrublands, which occupy about one-third of the Earths land surface. Arid soils have a very low concentration of organic matter, reflecting the paucity of vegetative production on these dry soils. Water deficiency is the major defining characteristic of Arid soils. ',
+            'Early blight is a common tomato disease caused by the fungus Alternaria solani. It can affect almost all parts of the tomato plants, including the leaves, stems, and fruits. The plants may not die, but they will be weakened and will set fewer tomatoes than normal',
+        found:
+            'Found on leaves as brown patches with thick white circumference',
+        character: 'They are found on leaves slowly affecting the fruits',
+        crop: 'Tomato and potato',
+        photo: Image.asset(
+          'assets/detail/t-early-blind.jpg',
+          fit: BoxFit.fill,
+        )),
+    Detail(
+        name: 'leaf mold',
+        about:
+            'Leaf mold is caused by the fungus Passalora fulva (previously called Fulvia fulva or Cladosporium fulvum). It is not known to be pathogenic on any plant other than tomato. There are many races of P. fulva. ',
         found: 'It is mainly found in regions of Aravalli west, Rajasthan.',
         character:
             'Sandy soils with low clay content. Poor in organic matter and moisture because arid regions are usually dry. Saline in nature with low nitrogen and high salt. Rich in plant food. Their color varies between red and brown.',
         crop:
             'Saline resistant and drought tolerant crops are suitable. Barley, maize, wheat, millets, cotton, and pulses.',
         photo: Image.asset(
-          'assets/detail/arid1.jpg',
+          'assets/detail/leaf.jpg',
           fit: BoxFit.fill,
         )),
     Detail(
-        name: 'Mountain and Forest Soil',
+        name: 'septori a leaf spot',
         about:
-            'Forest and mountain soils occur not only at higher elevations, but also at lower elevations that have sufficient rainfall. They are formed by the deposition of organic matter derived from forest growth and are heterogeneous in nature, depending on parent rocks, ground configuration, and climate. They are generally infertile for the production of field crops, but useful for supplying forest products, such as timber and fuel.',
+            'Septoria leaf spot is caused by a fungus, Septoria lycopersici. It is one of the most destructive diseases of tomato foliage and is particularly severe in areas where wet, humid weather persists for extended periods.',
         found:
-            'Himalayan area, Western and Eastern Ghats, and a few regions of the Peninsular Plateau.',
-        character:
-            'Acidic soil, rich in organic matter. Poor in lime, phosphorus, and potash. Good fertilization is required in these soils.',
+            'Septoria leaf spot usually appears on the lower leaves after the first fruit sets.',
+        character: 'They appear as small dots with thin white circumference',
         crop:
             'Wheat, barley, maize, tea, coffee, spices, tropical and temperate fruits',
         photo: Image.asset(
-          'assets/detail/mountain1.jpg',
+          'assets/detail/septori.jpg',
           fit: BoxFit.fill,
         )),
     Detail(
-        name: 'Desert Soil',
+        name: 'Canker',
         about:
-            'Desert soil is mostly sandy soil (90–95%) found in low-rainfall regions. It has a low content of nitrogen and organic matter with very high calcium carbonate and phosphate, thus making it infertile. The amount of calcium is 10 times higher in the lower layer than in the topsoil. The availability of nitrogen in the form of nitrates, using fertilizer, and proper irrigation, in addition to the already-present phosphates makes it useful.',
-        found:
-            'Areas of Rajasthan, Rann of Kutch of Gujarat, adjoining regions of Haryana and Punjab, and coastal areas of Kerala, Tamil Nadu, and Orissa. It covers about 4% of the total Indian land.',
-        character:
-            'Dry and sandy soil with some quantity of nitrogen present in it.',
-        crop:
-            'Only drought tolerant crops are suitable. Two examples are barley and millet.',
+            'A plant canker is a small area of dead tissue, which grows slowly, often over years. Some cankers are of only minor consequence, but others are ultimately lethal and therefore can have major economic implications for agriculture and horticulture',
+        found: 'Found on stems of plants that produce citrus fruits',
+        character: 'They occur as small black patches on stem',
+        crop: 'lemon, tomato',
         photo: Image.asset(
-          'assets/detail/desert1.jpg',
+          'assets/detail/canker.jpg',
           fit: BoxFit.fill,
         ))
   ];
