@@ -11,28 +11,55 @@ class SoilList extends StatefulWidget {
 }
 
 class _SoilListState extends State<SoilList> {
-
   List<Soil> soils = [
-    Soil(title: 'Alluvial Soil',
-        image: Image.asset('assets/soil/alluvial.jpeg',fit: BoxFit.fill,),
+    Soil(
+        title: 'Early Blight',
+        image: Image.asset(
+          'assets/soil/early-blight.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 0),
-    Soil(title: 'Black Soil',
-        image: Image.asset('assets/soil/black.jpg',fit: BoxFit.fill,),
+    Soil(
+        title: 'Late Blight',
+        image: Image.asset(
+          'assets/soil/late-blight.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 1),
-    Soil(title: 'Red and Yellow Soil',
-        image: Image.asset('assets/soil/red-yellow.jpg',fit: BoxFit.fill,),
+    Soil(
+        title: 'T - bacterial spot',
+        image: Image.asset(
+          'assets/soil/t-bacterial.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 2),
-    Soil(title: 'Laterite Soil',
-        image: Image.asset('assets/soil/laterite.jpg',fit: BoxFit.fill,),
+    Soil(
+        title: 'T - early blind',
+        image: Image.asset(
+          'assets/soil/t-early-blind.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 3),
-    Soil(title: 'Arid Soil',
-        image: Image.asset('assets/soil/arid.jpg',fit: BoxFit.fill,),
+    Soil(
+        title: 'Leaf mold',
+        image: Image.asset(
+          'assets/soil/leaf.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 4),
-    Soil(title: 'Mountain and Forest Soil',
-        image: Image.asset('assets/soil/mountain.jpg',fit: BoxFit.fill,),
+    Soil(
+        title: 'septori a leaf spot',
+        image: Image.asset(
+          'assets/soil/septori.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 5),
-    Soil(title: 'Desert Soil',
-        image: Image.asset('assets/soil/desert.jpg',fit: BoxFit.fill,),
+    Soil(
+        title: 'Canker',
+        image: Image.asset(
+          'assets/soil/canker.jpg',
+          fit: BoxFit.fill,
+        ),
         index: 6)
   ];
 
@@ -41,18 +68,16 @@ class _SoilListState extends State<SoilList> {
     return Align(
       alignment: Alignment.topCenter,
       child: Container(
-        height: MediaQuery.of(context).size.height-80,
+        height: MediaQuery.of(context).size.height - 80,
         width: MediaQuery.of(context).size.width,
         child: Scaffold(
           backgroundColor: Colors.green[200],
           appBar: AppBar(
-            title: Text(
-                'Soilpedia',
+            title: Text('Diseasepedia',
                 style: GoogleFonts.poppins(
                   color: Colors.black,
                   fontSize: 25.0,
-                )
-            ),
+                )),
             backgroundColor: Colors.green[200],
             elevation: 0.0,
           ),
@@ -68,16 +93,16 @@ class _SoilListState extends State<SoilList> {
     );
   }
 }
-class Soil{
+
+class Soil {
   String title;
   Image image;
   int index;
 
-  Soil({required this.title,required this.image,required this.index});
-
+  Soil({required this.title, required this.image, required this.index});
 }
 
-class Detail{
+class Detail {
   String name;
   String about;
   String found;
@@ -85,6 +110,11 @@ class Detail{
   String crop;
   Image photo;
 
-  Detail({required this.name, required this.about, required this.found, required this.character, required this.crop, required this.photo});
-
+  Detail(
+      {required this.name,
+      required this.about,
+      required this.found,
+      required this.character,
+      required this.crop,
+      required this.photo});
 }
