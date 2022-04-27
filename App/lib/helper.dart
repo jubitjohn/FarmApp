@@ -40,7 +40,7 @@ class HelperState extends State<Helper> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(15),
                   child: Container(
                     width: 300,
                     height: 50,
@@ -51,10 +51,13 @@ class HelperState extends State<Helper> {
                           bottomRight: Radius.circular(25)),
                     ),
                     child: Center(
-                      child: Text(
-                        'What Type of Crop are you growing?',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white, fontSize: 16),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: Text(
+                          'What Type of Crop are you growing?',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white, fontSize: 16),
+                        ),
                       ),
                     ),
                   ),
@@ -138,10 +141,13 @@ class HelperState extends State<Helper> {
                           bottomRight: Radius.circular(25)),
                     ),
                     child: Center(
-                      child: Text(
-                        'What Type of Soil are you using?',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white, fontSize: 16),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15),
+                        child: Text(
+                          'What Type of Soil are you using?',
+                          style: GoogleFonts.poppins(
+                              color: Colors.white, fontSize: 16),
+                        ),
                       ),
                     ),
                   ),
@@ -585,9 +591,9 @@ class HelperState extends State<Helper> {
   Future<int> getData() async {
     Random random = new Random();
     int a1, a2, a3;
-    if (pesticide_count < 23) {
+    if (pesticide_count < 15) {
       return 0;
-    } else if (pesticide_count > 23) {
+    } else if (pesticide_count > 50) {
       return 1;
     } else {
       return 2;
