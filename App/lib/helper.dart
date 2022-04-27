@@ -585,9 +585,9 @@ class HelperState extends State<Helper> {
   Future<int> getData() async {
     Random random = new Random();
     int a1, a2, a3;
-    if (pesticide_count < 5) {
+    if (pesticide_count < 23) {
       return 0;
-    } else if (pesticide_count > 30) {
+    } else if (pesticide_count > 23) {
       return 1;
     } else {
       return 2;
